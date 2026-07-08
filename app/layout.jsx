@@ -1,18 +1,19 @@
 import "./globals.css";
-import { Amiri, Sora, Space_Grotesk } from "next/font/google";
+import { Anton, Oswald, Roboto, Amiri } from "next/font/google";
 
-const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
-const grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-grotesk" });
+const anton = Anton({ subsets: ["latin"], weight: "400", variable: "--font-anton" });
+const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"], variable: "--font-roboto" });
 const amiri = Amiri({ subsets: ["arabic"], weight: ["400", "700"], variable: "--font-amiri" });
 
 export const metadata = {
-  title: "WaqfChain — Waqf on Blockchain | Eternal Charity, Immutable Trust",
+  title: "WAQF POST — Waqf on Blockchain | Eternal Charity, Immutable Trust",
   description:
-    "The world's first platform concept bringing Islamic Waqf endowments onto the blockchain. Transparent, immutable, perpetual charity — sadaqah jariyah, secured by cryptography.",
+    "EXCLUSIVE: The world's first platform concept bringing Islamic Waqf endowments onto the blockchain. Transparent, immutable, perpetual charity — sadaqah jariyah, secured by cryptography.",
   keywords: ["Waqf", "Blockchain", "Islamic Finance", "Endowment", "Sadaqah Jariyah", "Smart Contracts", "Halal Crypto"],
   openGraph: {
-    title: "WaqfChain — Waqf on Blockchain",
-    description: "Eternal charity, immutable trust. The first ever Waqf-on-Blockchain platform.",
+    title: "WAQF POST — Waqf on Blockchain",
+    description: "EXCLUSIVE: The first ever Waqf-on-Blockchain platform. Eternal charity, immutable trust.",
     type: "website",
   },
 };
@@ -20,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${sora.variable} ${grotesk.variable} ${amiri.variable}`}>{children}</body>
+      <body className={`${anton.variable} ${oswald.variable} ${roboto.variable} ${amiri.variable}`}>{children}</body>
     </html>
   );
 }
