@@ -144,7 +144,7 @@ export default function Home() {
             <a href="#protocol">Protocol</a>
             <a href="#pillars">Pillars</a>
             <a href="#faq">FAQ</a>
-            <a href="#join" className="keep">Join</a>
+            <a href="/chain" className="keep">Launch App ↗</a>
           </div>
         </div>
       </nav>
@@ -164,7 +164,7 @@ export default function Home() {
               The 1,400-year Islamic endowment, rebuilt on cryptographic permanence.
             </p>
             <div className="btn-row reveal d2">
-              <a href="#join" className="btn solid">Endow the future</a>
+              <a href="/chain" className="btn solid">Launch Waqf-M</a>
               <a href="#heritage" className="btn">Learn more</a>
             </div>
           </div>
@@ -356,6 +356,7 @@ export default function Home() {
             <a href="#protocol">Protocol</a>
             <a href="#pillars">Pillars</a>
             <a href="#faq">FAQ</a>
+            <a href="/chain">Waqf-M App</a>
             <a href="mailto:hello@waqfchain.example">Contact</a>
           </div>
           <div className="f-note">
