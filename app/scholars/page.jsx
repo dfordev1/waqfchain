@@ -80,7 +80,7 @@ export default function Scholars() {
               other researchers already in correspondence.
             </p>
             <div className="btn-row" style={{ marginTop: 24 }}>
-              <a className="btn solid" href="/chain/login">Create your account</a>
+              <a className="btn solid" href="/chain/circle">Enter the Circle</a>
               <a className="btn" href="/chain/explorer">Audit the registry first</a>
               <a className="btn" href="/spec">Read the protocol</a>
             </div>
