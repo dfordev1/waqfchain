@@ -285,7 +285,7 @@ export default function Papers() {
 
       <main style={{ paddingTop: 140 }}>
         <div className="wrap">
-          <div className="eyebrow">07 — Research</div>
+          <div className="eyebrow">08 — Research</div>
           <h1
             style={{
               fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.005em",

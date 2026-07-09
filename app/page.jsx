@@ -488,6 +488,31 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ============ PANEL 5c — THE PRODUCT ============ */}
+        <section className="panel" id="product">
+          <div className="wrap">
+            <div className="eyebrow reveal">06 — The Product</div>
+            <h2 className="big reveal d1" style={{ fontSize: "clamp(38px,4.8vw,68px)" }}>
+              THE REGISTRY IS <span className="gold-it">live</span>
+            </h2>
+            <p className="sub reveal d2">
+              Waqf-M is a working registry today — hash-chained records, Ed25519 signatures,
+              and Bitcoin anchoring, not a whitepaper promise.
+            </p>
+            <div className="btn-row reveal d2">
+              <a href="/chain" className="btn solid">Open the app</a>
+              <a href="/chain/explorer" className="btn">Public explorer</a>
+              <a href="/chain/setup" className="btn">Setup wizard</a>
+            </div>
+            <div className="stat-row reveal d2">
+              <div className="stat"><div className="v">100<span>%</span></div><div className="k">on-chain verifiable</div></div>
+              <div className="stat"><div className="v">3</div><div className="k">OTS calendars</div></div>
+              <div className="stat"><div className="v">#956,893</div><div className="k">first Bitcoin block anchor</div></div>
+              <div className="stat"><div className="v">1</div><div className="k">command to verify</div></div>
+            </div>
+          </div>
+        </section>
+
         {/* ============ PANEL 6 — QUOTE ============ */}
         <section className="panel center quote-panel short">
           <div className="wrap reveal">
@@ -503,7 +528,7 @@ export default function Home() {
         {/* ============ PANEL 7 — FAQ + JOIN ============ */}
         <section className="panel" id="faq" style={{ alignItems: "center" }}>
           <div className="wrap">
-            <div className="eyebrow reveal">06 — Questions</div>
+            <div className="eyebrow reveal">07 — Questions</div>
             <h2 className="big reveal d1" style={{ fontSize: "clamp(34px,4.4vw,60px)" }}>
               Asked with rigor,<br /><span className="gold-it">answered with rigor</span>
             </h2>
@@ -526,6 +551,7 @@ export default function Home() {
             <a href="#faq">FAQ</a>
             <a href="/papers">Papers</a>
             <a href="/chain">Waqf-M App</a>
+            <a href="/chain/setup">Setup</a>
             <a href="mailto:hello@waqfchain.example">Contact</a>
           </div>
           <div className="f-note">
