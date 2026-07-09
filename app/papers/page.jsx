@@ -188,10 +188,31 @@ export default function Papers() {
             </section>
           ))}
 
-          <div className="btn-row" style={{ margin: "72px 0 100px" }}>
-            <a className="btn solid" href="/#join">Join the founding cohort</a>
-            <a className="btn" href="/">Back to home</a>
-          </div>
+          <section style={{ padding: "88px 0 0" }}>
+            <div className="eyebrow">The gap in the literature</div>
+            <h2
+              style={{
+                fontWeight: 700, textTransform: "uppercase",
+                fontSize: "clamp(30px, 4.4vw, 56px)", lineHeight: 1.02, maxWidth: "20ch",
+              }}
+            >
+              The papers propose.{" "}
+              <span style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontWeight: 500, textTransform: "none", color: "var(--gold)" }}>
+                Waqf-M implements.
+              </span>
+            </h2>
+            <p className="sub" style={{ marginTop: 22, maxWidth: 640, color: "var(--gray)", fontSize: 16.5, lineHeight: 1.7 }}>
+              Nearly every study above is conceptual — frameworks, models, and calls for adoption.
+              Waqf-M is the working system they describe: hash-chained waqf records, Ed25519-signed
+              deeds, and a ledger anchored to Bitcoin through OpenTimestamps. Not a proposal —
+              a public registry you can audit right now.
+            </p>
+            <div className="btn-row" style={{ margin: "40px 0 100px" }}>
+              <a className="btn solid" href="/chain/explorer">Audit the public registry</a>
+              <a className="btn" href="/#join">Join the founding cohort</a>
+              <a className="btn" href="/">Back to home</a>
+            </div>
+          </section>
         </div>
       </main>
 
