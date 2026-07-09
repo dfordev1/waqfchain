@@ -25,7 +25,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${barlow.variable} ${fraunces.variable} ${amiri.variable}`}>{children}</body>
+      <body className={`${barlow.variable} ${fraunces.variable} ${amiri.variable}`}>
+        {/* If a Supabase auth email link falls back to the site root (hash-based
+            token or error), route it into the /chain app instead of dead-ending. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var h=location.hash;if(h&&(h.indexOf('access_token')>-1||h.indexOf('error')>-1||h.indexOf('type=recovery')>-1)){var t=h.replace(/^#/,'');if(h.indexOf('error')>-1){location.replace('/chain/login?error='+encodeURIComponent(decodeURIComponent((t.match(/error_description=([^&]*)/)||[])[1]||'Reset link is invalid or has expired. Request a new one.').replace(/\\+/g,' ')));}else{location.replace('/chain/reset-password#'+t);}}})();",
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
