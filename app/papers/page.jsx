@@ -383,6 +383,10 @@ export default function Papers() {
             >
               <span style={{ color: "#7a7a80" }}># audit a live waqf, trusting only maths + Bitcoin{"\n"}</span>
               <span style={{ color: "var(--gold)" }}>npx waqf-verify</span> c7ab7f0e-8880-42fd-af9a-965fd1c3bdba
+              <span style={{ color: "#7a7a80" }}>{"\n\n"}# or run it straight from source (no npm needed){"\n"}</span>
+              <span style={{ color: "var(--gold)" }}>git clone</span> https://github.com/dfordev1/Waqf-m{"\n"}
+              <span style={{ color: "var(--gold)" }}>cd</span> Waqf-m/packages/waqf-verify && <span style={{ color: "var(--gold)" }}>npm i</span>{"\n"}
+              <span style={{ color: "var(--gold)" }}>node</span> index.mjs c7ab7f0e-8880-42fd-af9a-965fd1c3bdba
             </pre>
             <div style={{ marginTop: 18, color: "var(--gray)", fontSize: 14.5, lineHeight: 1.9 }}>
               <div>✓ chain linkage — records form an unbroken hash chain</div>
