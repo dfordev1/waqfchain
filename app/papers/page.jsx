@@ -349,9 +349,49 @@ export default function Papers() {
               deeds, and a ledger anchored to Bitcoin through OpenTimestamps. Not a proposal —
               a public registry you can audit right now.
             </p>
-            <div className="btn-row" style={{ margin: "40px 0 100px" }}>
+            <div className="btn-row" style={{ margin: "40px 0 0" }}>
               <a className="btn solid" href="/chain/explorer">Audit the public registry</a>
               <a className="btn" href="/#join">Join the founding cohort</a>
+            </div>
+          </section>
+
+          <section style={{ padding: "88px 0 0" }}>
+            <div className="eyebrow">Verify it yourself</div>
+            <h2
+              style={{
+                fontWeight: 700, textTransform: "uppercase",
+                fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.04, maxWidth: "22ch",
+              }}
+            >
+              Don&apos;t trust us —{" "}
+              <span style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontWeight: 500, textTransform: "none", color: "var(--gold)" }}>
+                run the proof
+              </span>
+            </h2>
+            <p className="sub" style={{ marginTop: 22, maxWidth: 640, color: "var(--gray)", fontSize: 16.5, lineHeight: 1.7 }}>
+              One command audits any waqf end to end on your own machine — no account, nothing
+              installed permanently. It fetches only hashes, then verifies the chain, the Merkle
+              inclusion of every record, and the Bitcoin anchor locally against the real chain.
+            </p>
+            <pre
+              style={{
+                marginTop: 24, padding: "18px 20px", overflowX: "auto",
+                background: "#0a0a0a", color: "#e6e6e2", borderRadius: 4,
+                fontSize: 14, lineHeight: 1.7, fontFamily: "ui-monospace, Consolas, monospace",
+                border: "1px solid var(--hairline)",
+              }}
+            >
+              <span style={{ color: "#7a7a80" }}># audit a live waqf, trusting only maths + Bitcoin{"\n"}</span>
+              <span style={{ color: "var(--gold)" }}>npx waqf-verify</span> c7ab7f0e-8880-42fd-af9a-965fd1c3bdba
+            </pre>
+            <div style={{ marginTop: 18, color: "var(--gray)", fontSize: 14.5, lineHeight: 1.9 }}>
+              <div>✓ chain linkage — records form an unbroken hash chain</div>
+              <div>✓ merkle inclusion — each record recomputes to its anchored root</div>
+              <div>✓ bitcoin — that root is committed in a Bitcoin block (via OpenTimestamps)</div>
+              <div>✓ signatures — every Ed25519 signature checks out</div>
+            </div>
+            <div className="btn-row" style={{ margin: "36px 0 100px" }}>
+              <a className="btn solid" href="https://github.com/dfordev1/Waqf-m/tree/main/packages/waqf-verify" target="_blank" rel="noreferrer">The verifier source ↗</a>
               <a className="btn" href="/">Back to home</a>
             </div>
           </section>
