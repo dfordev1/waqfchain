@@ -43,6 +43,27 @@ const SECTIONS = [
         note: "A fiqh-grounded primer urging governments to adopt blockchain for awqāf administration.",
         url: "https://al-afkar.com/index.php/Afkar_Journal/article/view/158",
       },
+      {
+        n: "g6",
+        t: "Waqf Blockchain in Indonesia",
+        meta: "Al-Awqaf: Jurnal Wakaf dan Ekonomi Islam (Badan Wakaf Indonesia)",
+        note: "The national waqf board's own journal on chain adoption — the regulator's perspective.",
+        url: "https://www.jurnal.bwi.go.id/index.php/awqaf/article/view/129",
+      },
+      {
+        n: "g7",
+        t: "Teknologi Blockchain sebagai Upaya Akuntabilitas Wakaf",
+        meta: "SOSMANIORA: Jurnal Ilmu Sosial dan Humaniora",
+        note: "Blockchain as an accountability instrument for wakaf, from the Indonesian social-science side.",
+        url: "https://journal.literasisains.id/index.php/sosmaniora/article/view/4964",
+      },
+      {
+        n: "g8",
+        t: "Implementation of Advanced Technology in Waqf Management: A Systematic Literature Review",
+        meta: "Journal of Islamic Economic Laws (UMS)",
+        note: "The SLR of the field — what has been tried, what worked, and where the gaps remain.",
+        url: "https://journals2.ums.ac.id/index.php/jisel/article/view/8518",
+      },
     ],
   },
   {
@@ -72,9 +93,63 @@ const SECTIONS = [
       {
         n: "09",
         t: "Blockchain Model to Support Waqf Management",
-        meta: "2022",
+        meta: "Springer · Lecture Notes in Networks and Systems · 2022",
         note: "Proposes a reference architecture for registering deeds and tracking disbursements on-chain.",
-        url: "https://www.researchgate.net/publication/362715087_Blockchain_Model_to_Support_Waqf_Management",
+        url: "https://link.springer.com/chapter/10.1007/978-3-031-14627-5_33",
+      },
+      {
+        n: "09a",
+        t: "Cash Waqf-Based Crowdfunding Model Using Blockchain Technology: Problem, Solution, and Strategies for Family Waqf",
+        meta: "MUHARRIK: Jurnal Dakwah dan Sosial",
+        note: "Designs a blockchain crowdfunding model specifically for family (ahli) waqf.",
+        url: "https://ejournal.insuriponorogo.ac.id/index.php/muharrik/article/view/8182",
+      },
+      {
+        n: "09b",
+        t: "A Conceptual Framework for Cash Waqf with Blockchain in Financing Education for Islamic Religious Schools in Malaysia",
+        meta: "2019",
+        note: "Applies on-chain cash waqf to a concrete beneficiary class: religious school education.",
+        url: "https://www.researchgate.net/publication/334534862_A_Conceptual_Framework_for_Cash_Waqf_with_Blockchain_in_Financing_Education_for_the_Islamic_Religious_School_in_Malaysia",
+      },
+      {
+        n: "09c",
+        t: "Using Blockchain in Waqf, Wills and Inheritance Solutions in the Islamic System",
+        meta: "International Journal of Economics & Business Administration · 2021",
+        note: "Extends the ledger beyond waqf into the full Islamic estate: wills, inheritance, and endowment.",
+        url: "https://ideas.repec.org/a/ers/ijebaa/vixy2021i2p101-116.html",
+      },
+    ],
+  },
+  {
+    title: "Tokenization, Sukuk & DeFi",
+    papers: [
+      {
+        n: "t1",
+        t: "Wakaf Aset Digital: Non-Fungible Token (NFT)",
+        meta: "2022",
+        note: "Explores NFTs as unique, verifiable certifications of waqf assets — endowing the digital itself.",
+        url: "https://www.researchgate.net/publication/366583978_Wakaf_Aset_Digital_Non_Fungible_Token_NFT",
+      },
+      {
+        n: "t2",
+        t: "Transforming Islamic Finance: The Impact of Blockchain and Smart Sukuk",
+        meta: "2025",
+        note: "Smart sukuk as the yield engine — the instrument class a locked waqf corpus can be deployed into.",
+        url: "https://www.researchgate.net/publication/387986464_Transforming_Islamic_finance_the_impact_of_blockchain_and_Smart_Sukuk",
+      },
+      {
+        n: "t3",
+        t: "Sukuk Innovation and Blockchain Integration: Sustainable Social, Economic and Environmental Based Financing",
+        meta: "Al-Infaq: Jurnal Ekonomi Islam",
+        note: "Blossom Finance, Finterra, and Wethaq as case studies of chain-issued Islamic instruments.",
+        url: "https://ejournal2.uika-bogor.ac.id/index.php/alinfaq/article/view/2322",
+      },
+      {
+        n: "t4",
+        t: "Waqf Fund Management and the Blockchain Horizon",
+        meta: "2023",
+        note: "Surveys how fund-level waqf management changes when the ledger becomes the source of truth.",
+        url: "https://www.researchgate.net/publication/373144518_Waqf_Fund_Management_and_the_Blockchain_Horizon",
       },
     ],
   },
@@ -121,9 +196,76 @@ const SECTIONS = [
         note: "Applied study: blockchain waqf as sustainable funding for Islamic boarding-school education.",
         url: "https://journal.islamiconomic.or.id/index.php/ijei/article/view/1027",
       },
+      {
+        n: "d4",
+        t: "Digital Innovation in Zakat and Waqf Management: Case Study on Sharia Crowdfunding Platforms",
+        meta: "IJHESS · 2025",
+        note: "Cross-platform case study of live sharia crowdfunding — mobile, blockchain, and big data.",
+        url: "https://www.jurnal.unismuhpalu.ac.id/index.php/IJHESS/article/view/6942",
+      },
+      {
+        n: "d5",
+        t: "Waqf and Technology on Academic Publication",
+        meta: "SMART Insight · Islamic Studies Forum",
+        note: "Maps the waqf-tech publication landscape across journals and years.",
+        url: "https://journals.smartinsight.id/index.php/ISF/article/view/585",
+      },
+      {
+        n: "d6",
+        t: "Waqf and Zakat as Drivers of Community-Based Climate Resilience in the Net-Zero Transition",
+        meta: "Discover Global Society · Springer Nature · 2025",
+        note: "Positions ledger-verified waqf/zakat registries as infrastructure for climate finance at scale.",
+        url: "https://link.springer.com/article/10.1007/s44282-025-00333-y",
+      },
+    ],
+  },
+  {
+    title: "Reports, Industry & Field Notes",
+    papers: [
+      {
+        n: "r1",
+        t: "Islamic Finance Going Digital: Blockchain as a Tool to Catalyze Multi-Billion Waqf for SDGs",
+        meta: "United Nations Development Programme (UNDP)",
+        note: "UNDP × Badan Wakaf Indonesia on kitawakaf.com — blockchain waqf crowdfunding at national scale.",
+        url: "https://www.undp.org/asia-pacific/blog/islamic-finance-going-digital-blockchain-tool-catalyze-multi-billion-waqf-sdgs",
+      },
+      {
+        n: "r2",
+        t: "International Waqf and Blockchain Forum",
+        meta: "waqfblockchain.com · 2020",
+        note: "The field's first dedicated global convening of scholars, regulators, and builders.",
+        url: "https://www.waqfblockchain.com/",
+      },
+      {
+        n: "r3",
+        t: "DeFi and Waqf: Revolutionizing Islamic Endowments Through Decentralized Finance",
+        meta: "AIWAQF",
+        note: "Industry survey of programmable endowments, tokenized real estate, and automated disbursement.",
+        url: "https://ai-waqf.com/defi-and-waqf-revolutionizing-islamic-endowments-through-decentralized-finance/",
+      },
+      {
+        n: "r4",
+        t: "Crypto-Waqf: Building a Sustainable Islamic Blockchain",
+        meta: "Dr. Mussaad M. Al-Razouki · Medium",
+        note: "A practitioner's blueprint for a waqf-native chain economy.",
+        url: "https://mussaad.medium.com/crypto-waqf-building-a-sustainable-islamic-blockchain-6adb2fab9f1f",
+      },
+      {
+        n: "r5",
+        t: "baraka.fund — Waqf on Blockchain",
+        meta: "Platform",
+        note: "A live experiment in on-chain waqf giving.",
+        url: "https://baraka.fund/",
+      },
     ],
   },
 ];
+
+let counter = 0;
+const NUMBERED = SECTIONS.map((s) => ({
+  ...s,
+  papers: s.papers.map((p) => ({ ...p, n: String(++counter).padStart(2, "0") })),
+}));
 
 export default function Papers() {
   return (
@@ -158,7 +300,7 @@ export default function Papers() {
             from the first 2018 papers to the current SDG-era frameworks.
           </p>
 
-          {SECTIONS.map((s) => (
+          {NUMBERED.map((s) => (
             <section key={s.title} style={{ padding: "56px 0 0" }}>
               <div className="eyebrow noline" style={{ marginBottom: 6 }}>{s.title}</div>
               <div className="pillars" style={{ marginTop: 18 }}>
