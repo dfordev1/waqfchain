@@ -144,6 +144,7 @@ export default function Home() {
             <a href="#protocol">Protocol</a>
             <a href="#pillars">Pillars</a>
             <a href="#faq">FAQ</a>
+            <a href="/papers">Papers</a>
             <a href="/chain" className="keep">Launch App ↗</a>
           </div>
         </div>
@@ -356,6 +357,7 @@ export default function Home() {
             <a href="#protocol">Protocol</a>
             <a href="#pillars">Pillars</a>
             <a href="#faq">FAQ</a>
+            <a href="/papers">Papers</a>
             <a href="/chain">Waqf-M App</a>
             <a href="mailto:hello@waqfchain.example">Contact</a>
           </div>
