@@ -129,6 +129,149 @@ function Faq() {
   );
 }
 
+/* ---------------- diagrams ---------------- */
+function ArrowDefs({ id }) {
+  return (
+    <defs>
+      <marker id={id} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#0a0a0a" />
+      </marker>
+      <marker id={`${id}g`} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#b8912f" />
+      </marker>
+    </defs>
+  );
+}
+
+function DiagramLifecycle() {
+  return (
+    <svg className="diagram" viewBox="0 0 1180 430" role="img" aria-label="Lifecycle of an on-chain waqf">
+      <ArrowDefs id="a1" />
+      {/* waqif */}
+      <rect x="20" y="90" width="150" height="84" className="dg-box" />
+      <text x="95" y="126" textAnchor="middle" className="dg-t">WAQIF</text>
+      <text x="95" y="146" textAnchor="middle" className="dg-s">the donor · any amount</text>
+      <line x1="170" y1="132" x2="222" y2="132" className="dg-ln" markerEnd="url(#a1)" />
+      {/* deed */}
+      <rect x="228" y="80" width="196" height="104" className="dg-box" />
+      <text x="326" y="112" textAnchor="middle" className="dg-t">WAQFIYYAH</text>
+      <text x="326" y="131" textAnchor="middle" className="dg-s">the deed · hashed &amp; signed</text>
+      <text x="326" y="152" textAnchor="middle" className="dg-m">sha256: 0x8f3a…c2 · ed25519 ✓</text>
+      <line x1="424" y1="132" x2="476" y2="132" className="dg-ln" markerEnd="url(#a1)" />
+      {/* corpus */}
+      <rect x="482" y="80" width="170" height="104" className="dg-box-gold" />
+      <text x="567" y="114" textAnchor="middle" className="dg-t">CORPUS ∞</text>
+      <text x="567" y="133" textAnchor="middle" className="dg-s">locked forever</text>
+      <text x="567" y="152" textAnchor="middle" className="dg-s">never sold · never inherited</text>
+      <line x1="652" y1="132" x2="704" y2="132" className="dg-ln" markerEnd="url(#a1)" />
+      {/* nazir */}
+      <rect x="710" y="90" width="170" height="84" className="dg-box" />
+      <text x="795" y="124" textAnchor="middle" className="dg-t">NAZIR</text>
+      <text x="795" y="144" textAnchor="middle" className="dg-s">certified manager</text>
+      {/* shariah board */}
+      <rect x="690" y="10" width="210" height="46" className="dg-box-dash" />
+      <text x="795" y="30" textAnchor="middle" className="dg-g">SHARIAH BOARD</text>
+      <text x="795" y="46" textAnchor="middle" className="dg-s">AAOIFI review · multi-sig</text>
+      <line x1="795" y1="56" x2="795" y2="84" className="dg-ln-gold" markerEnd="url(#a1g)" />
+      <line x1="880" y1="132" x2="932" y2="132" className="dg-ln" markerEnd="url(#a1)" />
+      {/* yield */}
+      <rect x="938" y="80" width="222" height="104" className="dg-box" />
+      <text x="1049" y="112" textAnchor="middle" className="dg-t">YIELD</text>
+      <text x="1049" y="131" textAnchor="middle" className="dg-s">rent · profit · harvest</text>
+      <text x="1049" y="152" textAnchor="middle" className="dg-s">streamed by smart contract</text>
+      {/* beneficiaries */}
+      <line x1="1000" y1="184" x2="820" y2="248" className="dg-ln" markerEnd="url(#a1)" />
+      <line x1="1049" y1="184" x2="1049" y2="248" className="dg-ln" markerEnd="url(#a1)" />
+      <rect x="716" y="254" width="180" height="60" className="dg-box" />
+      <text x="806" y="280" textAnchor="middle" className="dg-t">WELL 💧</text>
+      <text x="806" y="299" textAnchor="middle" className="dg-s">clean water, perpetually</text>
+      <rect x="959" y="254" width="180" height="60" className="dg-box" />
+      <text x="1049" y="280" textAnchor="middle" className="dg-t">MADRASA 📚</text>
+      <text x="1049" y="299" textAnchor="middle" className="dg-s">scholarships ×12 / term</text>
+      <rect x="473" y="254" width="180" height="60" className="dg-box" />
+      <text x="563" y="280" textAnchor="middle" className="dg-t">CLINIC 🏥</text>
+      <text x="563" y="299" textAnchor="middle" className="dg-s">medicine &amp; care</text>
+      <line x1="1000" y1="184" x2="586" y2="248" className="dg-ln" markerEnd="url(#a1)" />
+      {/* ledger bar */}
+      <rect x="20" y="356" width="1140" height="54" className="dg-box-ink" />
+      <text x="590" y="380" textAnchor="middle" className="dg-t dg-w" fill="#fff">IMMUTABLE LEDGER</text>
+      <text x="590" y="398" textAnchor="middle" className="dg-s" fill="#9a9aa0">every event above is sealed as a hash-chained, publicly auditable record</text>
+      {[95, 326, 567, 795, 1049].map((x) => (
+        <line key={x} x1={x} y1="188" x2={x} y2="352" className="dg-ln-soft" />
+      ))}
+    </svg>
+  );
+}
+
+function DiagramAnchor() {
+  const leaf = (x, label) => (
+    <g key={x}>
+      <rect x={x} y="150" width="120" height="44" className="dg-box" />
+      <text x={x + 60} y="169" textAnchor="middle" className="dg-s">hash</text>
+      <text x={x + 60} y="185" textAnchor="middle" className="dg-m">{label}</text>
+    </g>
+  );
+  return (
+    <svg className="diagram" viewBox="0 0 1180 430" role="img" aria-label="Anchoring waqf records to Bitcoin">
+      <ArrowDefs id="a2" />
+      {/* records chain */}
+      {[
+        { x: 20, t: "RECORD 01", s: "deed created" },
+        { x: 190, t: "RECORD 02", s: "donation" },
+        { x: 360, t: "RECORD 03", s: "yield accrued" },
+        { x: 530, t: "RECORD 04", s: "disbursement" },
+      ].map((r, i) => (
+        <g key={r.x}>
+          <rect x={r.x} y="24" width="140" height="66" className="dg-box" />
+          <text x={r.x + 70} y="50" textAnchor="middle" className="dg-t" fontSize="12">{r.t}</text>
+          <text x={r.x + 70} y="70" textAnchor="middle" className="dg-s">{r.s}</text>
+          {i < 3 && (
+            <>
+              <line x1={r.x + 140} y1="57" x2={r.x + 164} y2="57" className="dg-ln" markerEnd="url(#a2)" />
+              <text x={r.x + 152} y="46" textAnchor="middle" className="dg-s" fontSize="9">prev</text>
+            </>
+          )}
+        </g>
+      ))}
+      <text x="20" y="12" className="dg-g">HASH-CHAINED RECORDS — each record commits to the one before it</text>
+      {/* leaves */}
+      {leaf(60, "0x2c…91")}
+      {leaf(230, "0x7f…0d")}
+      {leaf(400, "0xa7…74")}
+      {leaf(570, "0xe1…0b")}
+      {[90, 260, 430, 600].map((x) => (
+        <line key={x} x1={x} y1="90" x2={x + 30} y2="144" className="dg-ln-soft" markerEnd="url(#a2)" />
+      ))}
+      {/* merkle nodes */}
+      <rect x="145" y="240" width="120" height="42" className="dg-box" />
+      <text x="205" y="266" textAnchor="middle" className="dg-m">h(0x2c + 0x7f)</text>
+      <rect x="485" y="240" width="120" height="42" className="dg-box" />
+      <text x="545" y="266" textAnchor="middle" className="dg-m">h(0xa7 + 0xe1)</text>
+      <line x1="120" y1="194" x2="185" y2="234" className="dg-ln" markerEnd="url(#a2)" />
+      <line x1="290" y1="194" x2="225" y2="234" className="dg-ln" markerEnd="url(#a2)" />
+      <line x1="460" y1="194" x2="525" y2="234" className="dg-ln" markerEnd="url(#a2)" />
+      <line x1="630" y1="194" x2="565" y2="234" className="dg-ln" markerEnd="url(#a2)" />
+      {/* root */}
+      <rect x="285" y="330" width="180" height="56" className="dg-box-gold" />
+      <text x="375" y="353" textAnchor="middle" className="dg-t" fontSize="12.5">MERKLE ROOT</text>
+      <text x="375" y="372" textAnchor="middle" className="dg-m">db66…1a0</text>
+      <line x1="230" y1="282" x2="330" y2="324" className="dg-ln-gold" markerEnd="url(#a2g)" />
+      <line x1="520" y1="282" x2="420" y2="324" className="dg-ln-gold" markerEnd="url(#a2g)" />
+      {/* OTS + Bitcoin */}
+      <line x1="465" y1="358" x2="700" y2="358" className="dg-ln-gold" markerEnd="url(#a2g)" />
+      <rect x="706" y="322" width="216" height="72" className="dg-box" />
+      <text x="814" y="350" textAnchor="middle" className="dg-t" fontSize="12.5">OPENTIMESTAMPS</text>
+      <text x="814" y="369" textAnchor="middle" className="dg-s">independent calendar servers</text>
+      <line x1="922" y1="358" x2="954" y2="358" className="dg-ln" markerEnd="url(#a2)" />
+      <rect x="960" y="314" width="200" height="88" className="dg-box-ink" />
+      <text x="1060" y="346" textAnchor="middle" className="dg-t" fill="#fff" fontSize="12.5">BITCOIN BLOCK</text>
+      <text x="1060" y="366" textAnchor="middle" className="dg-m" fill="#e6c463">#855,201</text>
+      <text x="1060" y="386" textAnchor="middle" className="dg-s" fill="#9a9aa0">proof of existence, forever</text>
+      <text x="706" y="308" className="dg-g">ANCHORING — the root is timestamped into Bitcoin</text>
+    </svg>
+  );
+}
+
 /* ---------------- page ---------------- */
 export default function Home() {
   useReveal();
@@ -321,6 +464,30 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ============ PANEL 5b — ARCHITECTURE ============ */}
+        <section className="panel" id="architecture" style={{ alignItems: "center" }}>
+          <div className="wrap">
+            <div className="eyebrow reveal">05 — Architecture</div>
+            <h2 className="big reveal d1" style={{ fontSize: "clamp(38px,4.8vw,68px)" }}>
+              How the covenant<br />is <span className="gold-it">sealed</span>
+            </h2>
+            <div className="dg-card reveal d2">
+              <div className="dg-cap">
+                <span className="t">Fig. 1 — Lifecycle of an on-chain Waqf</span>
+                <span className="s">donor → deed → locked corpus → managed yield → beneficiaries, every step ledgered</span>
+              </div>
+              <DiagramLifecycle />
+            </div>
+            <div className="dg-card reveal">
+              <div className="dg-cap">
+                <span className="t">Fig. 2 — Sealing records into Bitcoin</span>
+                <span className="s">hash chain → merkle batch → OpenTimestamps → Bitcoin block confirmation</span>
+              </div>
+              <DiagramAnchor />
+            </div>
+          </div>
+        </section>
+
         {/* ============ PANEL 6 — QUOTE ============ */}
         <section className="panel center quote-panel short">
           <div className="wrap reveal">
@@ -336,7 +503,7 @@ export default function Home() {
         {/* ============ PANEL 7 — FAQ + JOIN ============ */}
         <section className="panel" id="faq" style={{ alignItems: "center" }}>
           <div className="wrap">
-            <div className="eyebrow reveal">05 — Questions</div>
+            <div className="eyebrow reveal">06 — Questions</div>
             <h2 className="big reveal d1" style={{ fontSize: "clamp(34px,4.4vw,60px)" }}>
               Asked with rigor,<br /><span className="gold-it">answered with rigor</span>
             </h2>
